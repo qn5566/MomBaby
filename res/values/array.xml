@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="textarray">
+        <item>推薦內容</item>
+        <item>所有頻道</item>
+        <item>訂閱的頻道</item>
+        <item>我的最愛</item>
+        <item>個人出版</item>
+    </string-array>
+    
+    <array name="imagearray">
+        <item>@drawable/home_26</item>
+        <item>@drawable/system_information_26</item>
+        <item>@drawable/pin3_26</item>
+        <item>@drawable/like_outline_26</item>
+        <item>@drawable/pin3_26</item>
+    </array>
+</resources>
