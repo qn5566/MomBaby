@@ -3,9 +3,7 @@ package com.mababy.main;
 import android.app.Activity;
 
 import android.app.ActionBar;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,7 +27,7 @@ import com.mababy.main.fragment.Fragmentd;
 import com.mababy.main.fragment.Fragmente;
 import com.mababy.main.fragment.Fragmentf;
 
-public class MainActivity extends Activity implements
+public class MainActivity extends FragmentActivity implements
 		NavigationDrawerFragment.NavigationDrawerCallbacks {
 
 	/**
@@ -103,7 +104,7 @@ public class MainActivity extends Activity implements
                 return;
         }
         
-        FragmentTransaction tran = getFragmentManager().beginTransaction();
+        FragmentTransaction tran = getSupportFragmentManager().beginTransaction();
         tran.replace(R.id.container, fragment).commit();   
 	}
 	public void onSectionAttached(int number) {

@@ -77,30 +77,31 @@ public final class R {
         public static final int tag_26=0x7f020015;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a0012;
-        public static final int RelativeLayout1=0x7f0a0011;
-        public static final int action_example=0x7f0a0017;
-        public static final int action_settings=0x7f0a0016;
-        public static final int button1=0x7f0a000a;
+        public static final int LinearLayout1=0x7f0a0013;
+        public static final int RelativeLayout1=0x7f0a0012;
+        public static final int action_example=0x7f0a0018;
+        public static final int action_settings=0x7f0a0017;
+        public static final int button1=0x7f0a000b;
         public static final int container=0x7f0a0001;
         public static final int drawer_layout=0x7f0a0000;
         public static final int header=0x7f0a0005;
         public static final int header_image=0x7f0a0006;
         public static final int header_text_layout=0x7f0a0007;
-        public static final int imageView1=0x7f0a000c;
-        public static final int imageView2=0x7f0a000d;
-        public static final int imageView3=0x7f0a000f;
+        public static final int imageView1=0x7f0a000d;
+        public static final int imageView2=0x7f0a000e;
+        public static final int imageView3=0x7f0a0010;
         public static final int layout_container=0x7f0a0003;
         public static final int listview=0x7f0a0004;
-        public static final int menu1=0x7f0a0013;
-        public static final int menutext1=0x7f0a0014;
-        public static final int navi=0x7f0a000b;
+        public static final int menu1=0x7f0a0014;
+        public static final int menutext1=0x7f0a0015;
+        public static final int navi=0x7f0a000c;
         public static final int navigation_drawer=0x7f0a0002;
-        public static final int navigation_menu=0x7f0a0010;
+        public static final int navigation_menu=0x7f0a0011;
         public static final int realtabcontent=0x7f0a0009;
+        public static final int realtabcontentt=0x7f0a000a;
         public static final int tabhost1=0x7f0a0008;
-        public static final int tabsText=0x7f0a0015;
-        public static final int textView1=0x7f0a000e;
+        public static final int tabsText=0x7f0a0016;
+        public static final int textView1=0x7f0a000f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

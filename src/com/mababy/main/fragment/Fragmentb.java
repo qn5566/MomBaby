@@ -1,10 +1,13 @@
 package com.mababy.main.fragment;
 
-import android.app.Fragment;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
+import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -13,6 +16,8 @@ import com.mababy.main.R;
 public class Fragmentb extends Fragment {
 
 	private TabHost mTabHost;
+	public TextView contentview;
+	public LinearLayout Tab_layout, Tab_1, Tab_2;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,37 +27,33 @@ public class Fragmentb extends Fragment {
 
 	private View initView(LayoutInflater inflater, ViewGroup container) {
 		View view = inflater.inflate(R.layout.fragment_b, container, false);
-			final TabHost ThisTabHost = (TabHost) view.findViewById(R.id.tabhost1);
-			ThisTabHost.setup();
-			ThisTabHost.getTabWidget().setDividerDrawable(
+			mTabHost = (TabHost) view.findViewById(R.id.tabhost1);
+			mTabHost.setup();
+			mTabHost.getTabWidget().setDividerDrawable(
 					R.drawable.tab_divider);
 			for (TabDef ThisTab : new TabDef[] {
 					new TabDef("精選", "Content 1"),
 					new TabDef("推薦", "Content 2"),
 					 }) {
-				final TextView contentview = new TextView(getActivity());
-				
+				contentview = new TextView(getActivity());				
 				contentview.setText(ThisTab.Content);
-				
-				
+				Tab_layout = new LinearLayout(getActivity());
 				
 				
 				View indicatorview = android.view.LayoutInflater.from(
 						getActivity()).inflate(R.layout.tabs_bg_styled, null);
 				((TextView) indicatorview.findViewById(R.id.tabsText))
 						.setText(ThisTab.Indicator);
-				ThisTabHost.addTab(ThisTabHost
+				mTabHost.addTab(mTabHost
 						.newTabSpec(ThisTab.Indicator)
 						.setIndicator(indicatorview)
 						.setContent(
-								new android.widget.TabHost.TabContentFactory() {
-									
-									public View createTabContent(String tag) {
+								new android.widget.TabHost.TabContentFactory() {									
+									public View createTabContent(String tag) {											
+										Tabswitch(tag);	
 										
-										
-										
-										
-										return contentview;
+										return Tab_layout;
+										//return contentview;
 									} /* createTabContent */
 								} /* TabContentFactory */
 						));
@@ -62,6 +63,18 @@ public class Fragmentb extends Fragment {
 
 	}
 
+	
+	public View Tabswitch(String tag){
+		if(tag.equals("精選")){
+//			Tab_layout = 
+			//contentview.setText("你成功摟");
+		}if(tag.equals("推薦")){
+			
+			//contentview.setText("你好嗎?");
+		}
+		return contentview;
+	}
+	
 	public class TabDef {
 		public final String Indicator, Content;
 
