@@ -1,6 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.mababy.main.MainActivity" 
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.mababy.main.MainActivity" >
+    >
 
     <item
         android:id="@+id/action_example"
@@ -11,5 +12,18 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/menu_item_share"
+        android:icon="@drawable/pin3_26"
+        android:title="Share"
+        android:actionProviderClass="com.mababy.main.actionprovider.DynamicShareActionProvider"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_item_share_later"
+        android:icon="@drawable/tag_26"
+        android:title="Share later"
+        android:showAsAction="never"
+        android:actionProviderClass="com.mababy.main.actionprovider.DynamicShareActionProvider"
+		/>
 
 </menu>

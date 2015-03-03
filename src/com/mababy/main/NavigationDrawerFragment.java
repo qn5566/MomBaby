@@ -272,6 +272,7 @@ public class NavigationDrawerFragment extends Fragment {
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
+	// 當導覽打開時的設定
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		// If the drawer is open, show the global app actions in the action bar.
@@ -281,16 +282,20 @@ public class NavigationDrawerFragment extends Fragment {
 		if (mDrawerLayout != null && isDrawerOpen()) {
 			inflater.inflate(R.menu.global, menu);
 			showGlobalContextActionBar();
+		}else{
+			showGlobalContextActionBar_close();
 		}
 		super.onCreateOptionsMenu(menu, inflater);
 	}
+	
+	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
 		}
-
+	//menu_item_share  action_example
 		if (item.getItemId() == R.id.action_example) {
 			Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT)
 					.show();
@@ -309,9 +314,15 @@ public class NavigationDrawerFragment extends Fragment {
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayShowTitleEnabled(true);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-		actionBar.setTitle(R.string.app_name);
+		actionBar.setTitle(R.string.app_name_open);
 	}
 
+	private void showGlobalContextActionBar_close() {
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayShowTitleEnabled(true);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+		actionBar.setTitle(R.string.app_name);
+	}
 	private ActionBar getActionBar() {
 		return getActivity().getActionBar();
 	}

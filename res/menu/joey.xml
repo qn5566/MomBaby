@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:library="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mababy.main.MainActivity" 
+    >
+
+    <item
+        android:id="@+id/menu_item_share"
+        android:icon="@drawable/pin3_26"
+        android:title="Share"
+        android:actionProviderClass="com.mababy.main.actionprovider$DynamicShareActionProvider"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_item_share_later"
+        android:icon="@drawable/settings_26"
+        android:title="Share later"
+        android:actionProviderClass="com.mababy.main.actionprovider$DynamicShareActionProvider"
+        android:showAsAction="never"/>
+
+</menu>
